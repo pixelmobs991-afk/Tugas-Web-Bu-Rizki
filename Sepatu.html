@@ -1,109 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sepatu Converse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #F59F27;
-      padding: 20px;
-      min-height: 100vh;
-    }
-    
-    h1 { 
-    	text-align: center;
-        color: white;
-    }
-    
-    title {
-      font-size: clamp(28px, 5vw, 36px);
-      margin-bottom: 30px;
-      font-weidth: bold;
+    /* Reset & Base Style */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .hewan {
-      background-color: #2776F5;
-      color: black;
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0F172A; /* Slate Gelap */
+      color: #F8FAFC;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-title { 
       text-align: center;
-      border: 6px solid white;
-      border-radius: 25px;
+      color: #F8FAFC;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Card Box Container */
+    .card-box {
+      background-color: #1E293B;
+      border: 2px solid #334155;
+      border-radius: 20px;
       margin: 25px auto;
       padding: 30px;
-      max-width: 900px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease;
     }
 
-    .hewan img {
+    .card-box:hover {
+      border-color: #38BDF8;
+    }
+
+    .card-box img {
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
       height: auto;
       border-radius: 15px;
       margin: 20px auto;
-      diaplay: block;
+      display: block;
+      border: 3px solid #38BDF8; /* Frame Biru Cerah */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .hewan h2, .hewan h3 {
-     font-size: 28px;
-     margin-bottom: 20px;
-     text-align: center;
-     color: white;
-    }
-
-    .hewan p {
-      text-align: justify
-      font-size: 16px;
+    .card-box h2 {
+      color: #38BDF8; /* Biru Cerah */
+      font-size: clamp(22px, 4vw, 28px);
       margin-bottom: 15px;
-      color: white;
+      text-align: center;
+      font-weight: 600;
     }
 
-     .navigation {
-      margin-top: 50px;
+    .card-box h3 {
+      color: #38BDF8;
+      font-size: clamp(20px, 3.5vw, 24px);
+      margin: 15px 0 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .card-box p {
+      color: #CBD5E1; /* Abu-abu terang untuk paragraf */
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .card-box b {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    /* Navigation Buttons */
+    .navigation {
+      margin-top: 40px;
       display: flex;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-     }
-        
-     .nav-button {
-      background: #7DA0DB;
-      color: white;
-      border: 4px solid white;
-      border-radius: 50px;
-      padding: 15px 30px;
-      margin: 10px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-     }
+    }
 
-    b {
-      font-weight: bold;
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: #334155;
+      color: #F8FAFC;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background-color: #6366F1; /* Indigo */
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .nav-button:active {
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <h1 class="title">Sepatu New Balance</h1>
 
-  <div class="hewan">
-    <h2>New Balance</h2>
-    <img src="Logo New Balance.png" alt="New Balance">
-    <p style="text-align:left">New Balance Athletics, Inc (NB) adalah sebuah perusahaan multinasional Amerika yang berpusat di Boston, Massachusetts. Perusahaan tersebut dibentuk pada tahun 1906 dengan nama "New Balance Arch Support Company" dan merupakan salah satu produsen sepatu olahraga terbesar di dunia.
+  <main class="container">
+    <h1 class="main-title">Sepatu Converse</h1>
 
-New Balance memproduksi barangnya di Amerika, dan juga di Inggris untuk pasar Eropa, di mana mereka memproduksi beberapa model populer mereka seperti model 990—berlawanan dengan saingannya, yang sering kali memproduksi di luar AS dan Eropa. Hasilnya, sepatu New Balance cenderung lebih mahal dari sepatu produksi merek lain. Untuk mengimbangi perbedaan harga tersebut, New Balance membuat perbedaan pada produk mereka dengan fitur teknis, seperti sisipan gel campuran, hitungan tumit dan pilihan ukuran yang lebih banyakm terutama untuk yang sangat sempit atau sangat lebar. Perusahaan tersebut telah membuat keuntungan sekitar $69 miliar sejak 1992.</p>
-  </div>
-  
-  <div class="hewan">
-    <h2 style="text-align:center;">Contoh Sepatu New Balance</h2>
-    <img src="Sepatu New Balance.jpeg" alt="Sepatu New Balance">
-    <h3 style="text-align:center"> New Balance 550 White Blue Haze </h3>
+    <div class="card-box">
+      <h2>Converse</h2>
+      <img src="Logo Converse.jpeg" alt="Logo Converse">
+      <p>Converse adalah sebuah perusahaan sepatu asal Amerika dengan hasil produksi yang terutama terdiri dari alas kaki berjenis olahraga dan brand Supreme gaya hidup. Perusahaan telah berdiri sejak tahun 1908 dan, pada tahun 2003, dibeli senilai $ 305.000.000 (USD) sebagai anak perusahaan dari Nike, Inc.[2] Converse memproduksi produk di bawah nama dagang seperti One Star, Chuck Taylor All Star, And1 shoes. Sepatu converse dibedakan dengan sejumlah fitur, termasuk motif lencana bintangnya. Bahkan, sol karet All Star, halus bulat disekitaran di atas, dan melengkung di sekitar jalur telah menjadi khas yang begitu dikenali, pada tahun 2014, Converse mengajukan gugatan ke Komisi Perdagangan Internasional AS yang menuduh Walmart, Skechers, Kmart, dan 28 pengecer lain beserta produsen dengan masalah pelanggaran merek dagang. Dalam upaya untuk melestarikan keaslian sepatu selain fungsinya. Sejumlah perkara diselesaikan, termasuk Fila dan Iconix.[3][4] Selain alas kaki, perusahaan menjual barang-barang lainnya secara global melalui pengecer di lebih dari 160 negara dan melalui sekitar 75-perusahaan milik toko ritel di Amerika Serikat.</p>
+    </div>
 
-    <p style="text-align:left"><b> New Balance 550 White Blue Haze </b> Sepatu ini awalnya dikenal sebagai New Balance P550 Oxford dan terutama merupakan sepatu murah. Sepatu ini dijual seharga $45 saat pertama kali dirilis pada tahun 1989. Sepatu ini dirancang untuk meningkatkan New Balance 480. Kulit halus digunakan untuk bagian atas, dan panel profil berlubang serta jaring ringan untuk bagian dasar agar lebih bernapas, yang merupakan keluhan utama pada 480. Tumit memiliki struktur cetakan untuk meningkatkan stabilitas dan penguncian, dan sol menggunakan pola dan tata letak traksi yang diperbarui untuk memberikan respons yang lebih baik. Sepatu ini juga memiliki sol yang sangat tebal dengan busa EVA.
+    <div class="card-box">
+      <h2>Contoh Sepatu Converse</h2>
+      <img src="Sepatu Converse.png" alt="Sepatu Converse">
+      <h3> Converse Chuck Taylor All Star 70s Low Ox </h3>
 
-Sepatu ini kembali diproduksi pada tahun 2020 ketika Aimé Leon Dore memutuskan untuk berkolaborasi dengan perusahaan. Sepatu ini tidak sukses saat pertama kali diluncurkan beberapa dekade lalu dan sangat langka bagi perusahaan itu sendiri sehingga mereka harus membeli sepatu bekas dan mencari sketsa lama untuk membuat ulang sepatu ini agar sedekat mungkin dengan aslinya. Peluncuran ini terbukti sangat sukses sehingga menyebabkan sepatu ini menjadi produk umum bagi perusahaan.</p>
-  </div>
+      <p><b>Converse Chuck Taylor All Star 70s Low Ox</b> berwarna klasik hitam-putih (Black/Egret) yang difoto dari sisi samping luar dengan latar belakang abu-abu polos. Sepatu kasual bermodel potongan pendek (low-top) ini memperlihatkan karakteristik khas seri Chuck 70 seperti bahan upper kanvas hitam tebal dengan jahitan putih kontras (winged tongue stitching) di dekat jemari, serta bagian sol karet (midsole) berwarna putih gading (creamy) yang lebih tinggi dan mengilap (glossy) lengkap dengan garis hitam melingkar (foxing stripe).</p>
+    </div>
 
-  <div class="navigation">
-   <a href="Biodata Baru.html" class="nav-button"><- Back</a>
-   <a href="Dino.html" class="nav-button">Next -></a>
-   <a href="Mulai.html" class="nav-button"><- Kembali ke halaman depan</a>
-  </div>
+    <!-- Tombol Navigasi -->
+    <div class="navigation">
+      <a href="Profil Baru.html" class="nav-button btn-secondary">&larr; Back</a>
+      <a href="Bagian awal.html" class="nav-button btn-secondary">Kembali ke Halaman Depan</a>
+      <a href="Dino.html" class="nav-button btn-primary">Next &rarr;</a>
+    </div>
+  </main>
+
 </body>
 </html>
