@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobil Mclaren</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Base Style */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0F172A; /* Slate Gelap */
+      color: #F8FAFC;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-title { 
+      text-align: center;
+      color: #F8FAFC;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Card Box Container */
+    .card-box {
+      background-color: #1E293B;
+      border: 2px solid #334155;
+      border-radius: 20px;
+      margin: 25px auto;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease;
+    }
+
+    .card-box:hover {
+      border-color: #38BDF8;
+    }
+
+    .card-box img {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+      border: 3px solid #38BDF8; /* Frame Biru Cerah */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-box h2 {
+      color: #38BDF8; /* Biru Cerah */
+      font-size: clamp(22px, 4vw, 28px);
+      margin-bottom: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .card-box h3 {
+      color: #38BDF8;
+      font-size: clamp(20px, 3.5vw, 24px);
+      margin: 15px 0 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .card-box p {
+      color: #CBD5E1; /* Abu-abu terang untuk paragraf */
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .card-box b {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    /* Navigation Buttons */
+    .navigation {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: #334155;
+      color: #F8FAFC;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background-color: #6366F1; /* Indigo */
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .nav-button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <h1 class="main-title">Mobil Mclaren</h1>
+
+    <div class="card-box">
+      <h2>Maclaren</h2>
+      <img src="Logo Mclaren.jpg" alt="Logo Mclaren">
+      <p>Sejarah logo McLaren dimulai pada tahun 1964 dengan logo Burung Kiwi rancangan Michael Turner sebagai penghormatan terhadap tanah air sang pendiri, Bruce McLaren, yang kemudian berevolusi menjadi desain "Speedy Kiwi" berwarna Papaya Orange pada tahun 1967. Identitas ini berubah total pada era 1981–1996 menjadi pola garis chevron merah mirip huruf V akibat pengaruh sponsor utama Marlboro, sebelum akhirnya disederhanakan pasca-kerjasama tersebut menjadi satu tanda lengkung modern bernama Speedmark pada tahun 1997. Simbol Speedmark yang kini kembali menggunakan warna oranye klasik tersebut memvisualisasikan pusaran angin aerodinamis (vortices) hasil pengujian wind tunnel, sekaligus melambangkan kecepatan dan inovasi teknologi mutakhir masa kini.</p>
+    </div>
+
+    <div class="card-box">
+      <h2>Contoh Mobil Mclaren</h2>
+      <img src="Mobil Mclaren.jpeg" alt="Mobil Mclaren">
+      <h3>Maclaren Senna</h3>
+
+      <p><b>Mclaren Senna</b> McLaren Senna adalah mobil hyper bermesin pertengahan produksi terbatas yang diproduksi oleh McLaren Automotive. Mobil ini adalah tambahan ketiga dalam Seri Ultimate McLaren, bergabung dengan F1 dan P1; Namun, itu bukan penerus langsung ke salah satu mobil. Senna diluncurkan secara online oleh perusahaan pada 10 Desember 2017, dengan pembukaan resmi berlangsung di Geneva Motor Show 2018.</p>
+    </div>
+
+    <!-- Tombol Navigasi -->
+    <div class="navigation">
+      <a href="Hewan Ovovivipar.html" class="nav-button btn-secondary">&larr; Back</a>
+      <a href="Bagian awal.html" class="nav-button btn-primary">Kembali ke Halaman Depan</a>
+    </div>
+  </main>
+
+</body>
+</html>
