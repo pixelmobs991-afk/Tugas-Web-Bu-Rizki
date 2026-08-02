@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Baru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & Base Style */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0F172A; /* Slate Gelap */
+      color: #F8FAFC;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #F8FAFC;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    /* Kartu Profil */
+    .profile {
+      background: #1E293B;
+      border: 2px solid #334155;
+      border-radius: 20px;
+      width: 300px;
+      padding: 30px 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .profile:hover {
+      transform: translateY(-5px);
+      border-color: #38BDF8; /* Highlight Biru Cerah saat Hover */
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid #38BDF8;
+      display: block;
+    }
+
+    .profile h2 {
+      color: #38BDF8; /* Biru Cerah */
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .profile p {
+      color: #94A3B8; /* Abu-abu terang */
+      font-size: 15px;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    /* Navigasi Tombol */
+    .nav-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-back {
+      background-color: #334155;
+      color: #F8FAFC;
+    }
+
+    .btn-back:hover {
+      background-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    .btn-next {
+      background-color: #6366F1; /* Indigo */
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-next:hover {
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main-wrapper">
+    <h1>Profil Baru</h1>
+
+    <div class="container">
+      <!-- Profil 1 -->
+      <div class="profile">
+        <img src="Alvino.jpeg" alt="Alvino Fahrul R.">
+        <h2>Alvino Fahrul R.</h2>
+        <p>Hobi: Bermain Game</p>
+        <p>Umur: 17 tahun</p>
+        <p>SMK UNITOMO</p>
+      </div>
+      
+    <!-- Tombol Navigasi -->
+    <div class="nav-buttons">
+      <a href="Bagian awal.html" class="btn btn-back">&larr; Back</a>
+      <a href="Sepatu.html" class="btn btn-next">Next &rarr;</a>
+    </div>
+  </main>
+
+</body>
+</html>
