@@ -1,98 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinosaurus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #F59F27;
-      padding: 20px;
-      min-height: 100vh;
-    }
-    
-    h1 { 
-    	text-align: center;
-        color: white;
-    }
-    
-    title {
-      font-size: clamp(28px, 5vw, 36px);
-      margin-bottom: 30px;
-      font-weidth: bold;
+    /* Reset & Base Style */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .hewan {
-      background-color: #2776F5;
-      color: black;
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0F172A; /* Slate Gelap */
+      color: #F8FAFC;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-title { 
       text-align: center;
-      border: 6px solid white;
-      border-radius: 25px;
+      color: #F8FAFC;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Card Box Container */
+    .card-box {
+      background-color: #1E293B;
+      border: 2px solid #334155;
+      border-radius: 20px;
       margin: 25px auto;
       padding: 30px;
-      max-width: 900px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease;
     }
 
-    .hewan img {
+    .card-box:hover {
+      border-color: #38BDF8;
+    }
+
+    .card-box img {
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
       height: auto;
       border-radius: 15px;
       margin: 20px auto;
-      diaplay: block;
+      display: block;
+      border: 3px solid #38BDF8; /* Frame Biru Cerah */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .hewan h2, .hewan h3 {
-     font-size: 28px;
-     margin-bottom: 20px;
-     text-align: center;
-     color: white;
-    }
-
-    .hewan p {
-      text-align: justify
-      font-size: 16px;
+    .card-box h2 {
+      color: #38BDF8; /* Biru Cerah */
+      font-size: clamp(22px, 4vw, 28px);
       margin-bottom: 15px;
-      color: white;
+      text-align: center;
+      font-weight: 600;
     }
 
-     .navigation {
-      margin-top: 50px;
+    .card-box h3 {
+      color: #38BDF8;
+      font-size: clamp(20px, 3.5vw, 24px);
+      margin: 15px 0 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .card-box p {
+      color: #CBD5E1; /* Abu-abu terang untuk paragraf */
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .card-box b {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    /* Navigation Buttons */
+    .navigation {
+      margin-top: 40px;
       display: flex;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-     }
-        
-     .nav-button {
-      background: #7DA0DB;
-      color: white;
-      border: 4px solid white;
-      border-radius: 50px;
-      padding: 15px 30px;
-      margin: 10px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-     }
+    }
 
-    b {
-      font-weight: bold;
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: #334155;
+      color: #F8FAFC;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background-color: #6366F1; /* Indigo */
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .nav-button:active {
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <h1 class="title">Dinosaurus</h1>
 
-  <div class="hewan">
-    <img src="Mosasaurus.jpeg" alt="Mosasaurus">
-    <h3 style="text-align:center">Mosasaurus</h3>
+  <main class="container">
+    <h1 class="main-title">Dinosaurus</h1>
 
-    <p style="text-align:left"><b>Mosasaurus</b> Mosasaurus adalah genus reptil laut purba raksasa predator puncak yang hidup pada periode Kapur Akhir sekitar 70–66 juta tahun lalu, di mana secara evolusi hewan ini bukanlah dinosaurus melainkan kerabat dekat ular dan kadal modern (seperti komodo) yang spesies terbesarnya (Mosasaurus hoffmanni) dapat tumbuh sepanjang 12–18 meter dengan berat hingga 15 ton. Tubuhnya dirancang sangat hidrodinamis menyerupai torpedo bersisik keras dengan empat sirip dayung sebagai kemudi dan ekor vertikal mirip hiu yang menyabet ke samping sebagai motor penggerak utamanya. Untuk berburu mangsa seperti ikan, hiu, penyu, hingga sesama jenisnya, Mosasaurus mengandalkan lubang hidung di atas moncong untuk bernapas efisien, sendi rahang bawah fleksibel yang bisa melebar ke samping untuk menelan mangsa besar bulat-bulat mirip ular, serta puluhan gigi setajam silet yang diperkuat barisan gigi tambahan di langit-langit mulut (pterygoid) untuk mengunci mangsa. Sebagai hewan yang sepenuhnya hidup dan melahirkan anaknya (vivipar) di dalam air, masa kejayaan penguasa lautan purba ini akhirnya punah secara massal sekitar 66 juta tahun lalu akibat dampak tumbukan asteroid raksasa yang menghantam Bumi.</p>
-  </div>
+    <div class="card-box">
+      <h3>Pterosaurus</h3>
+      <img src="Ptrodactile.jpg" alt="Ptrodactile">
 
-  <div class="navigation">
-   <a href="Sepatu.html" class="nav-button"><- Back</a>
-   <a href="Anime.html" class="nav-button">Next -></a>
-   <a href="Mulai.html" class="nav-button"><- Kembali ke halaman depan</a>
-  </div>
+      <p><b>Pterosaurus</b> yang artinya "kadal bersayap" adalah suatu jenis "reptil terbang" dari cabang atau ordo Pterosauria yang telah punah. Mereka hidup dari akhir Trias sampai akhir masa Kapur (228 sampai 66 juta tahun yang lalu). Pterosaurus adalah vertebrata paling awal yang diketahui memiliki kemampuan terbang yang kuat. Sayap mereka dibentuk oleh selaput kulit, otot, dan jaringan lain yang membentang dari pergelangan kaki yang secara cepat ataupun lambat akan tetap memanjang keempat jarinya.
+
+Spesies awal memiliki panjang, rahang bergigi dan ekor panjang, sementara bentuk selanjutnya memiliki ekor yang sangat kecil, dan beberapa gigi yang berkurang. Badannya ditutupi oleh mantel berbulu yang terbuat dari filamen seperti rambut yang dikenal sebagai pycnofibers, yang menutupi tubuh dan bagian sayapnya. Pterosaurus berkembang dengan berbagai ukuran dewasa, mulai dari anurognatoid yang sangat kecil hingga makhluk terbang terbesar yang diketahui sepanjang masa, yaitu termasuk Quetzalcoatlus dan Hatzegopteryx.
+
+Pterosaurus sering disebut pada media populer dan oleh masyarakat umum sebagai "dinosaurus terbang", tapi secara ilmiah sebenarnya salah karena Pterosaurus tidak termasuk dinosaurus. Istilah "dinosaurus" terbatas hanya pada reptil yang diturunkan dari nenek moyang terakhir kelompok Saurischia dan Ornithischia (cabang dinosaurus, yang mencakup burung), dan saat ini secara konsensus ilmiah bahwa kelompok ini tidak termasuk pterosaurus, dan juga berbagai kelompok dari reptil laut yang telah punah, seperti ichthyosaurus, plesiosaurus, dan mosasaurus.</div>
+
+    <!-- Tombol Navigasi -->
+    <div class="navigation">
+      <a href="Sepatu.html" class="nav-button btn-secondary">&larr; Back</a>
+      <a href="Bagian awal.html" class="nav-button btn-secondary">Kembali ke Halaman Depan</a>
+      <a href="Anime.html" class="nav-button btn-primary">Next &rarr;</a>
+    </div>
+  </main>
+
 </body>
 </html>
