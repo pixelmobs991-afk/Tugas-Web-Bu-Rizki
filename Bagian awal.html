@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas KKA</title>
+  <style>
+    /* Reset & Base Style */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body { 
+      font-family: Arial, sans-serif;
+      background-color: #F59F27;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .main-title {
+      color: white;
+      text-align: center;
+      font-size: clamp(32px, 6vw, 50px);
+      margin-bottom: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .judul {
+      background-color: #2776F5;
+      border: 6px solid #000;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 0 #000;
+    }
+
+    .semester-title {
+      color: white;
+      font-size: clamp(22px, 4vw, 28px);
+      margin: 10px 0 15px 5px;
+    }
+
+    .subjudul {
+      background-color: #ffffff;
+      border: 6px solid #000;
+      border-radius: 25px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .item-list {
+      list-style: none;
+    }
+
+    .item-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #000;
+      font-size: clamp(16px, 3.5vw, 20px);
+      font-weight: bold;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background-color: #f8f9fa;
+      transition: background-color 0.2s ease;
+    }
+
+    .item-list li:hover {
+      background-color: #e9ecef;
+    }
+
+    /* Base Styling untuk Semua Tombol Link */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      border-radius: 50px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-materi {
+      background-color: #7DA0DB;
+      font-size: clamp(12px, 2.5vw, 15px);
+      padding: 6px 16px;
+      border: 2px solid white;
+      border-radius: 20px;
+    }
+
+    .btn-container {
+      text-align: left;
+      margin-top: 20px;
+      padding-top: 10px;
+    }
+
+    .btn-tugas {
+      background-color: #093D94;
+      font-size: clamp(16px, 3.5vw, 22px);
+      padding: 12px 28px;
+      border: 3px solid white;
+      box-shadow: 0 4px 0 #000;
+    }
+
+    .btn-tugas:hover {
+      box-shadow: 0 6px 0 #000;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <h1 class="main-title">Tugas KKA</h1>
+    
+    <div class="judul">
+      
+      <!-- Semester 1 -->
+      <section>
+        <h2 class="semester-title">Semester 1:</h2>
+        <div class="subjudul">
+          <ul class="item-list">
+            <li>
+              <span>Biodata Lama</span>
+              <a href="Biodata lama.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+            <li>
+              <span>Hewan Ovovivipar</span>
+              <a href="Hewan Ovovivipar.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+            <li>
+              <span>Mobil Koenigsegg</span>
+              <a href="Mobil Koenigsegg.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+          </ul>
+          
+          <div class="btn-container">
+            <a href="Biodata lama.html" class="btn btn-tugas">Tugas 1 &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Semester 2 -->
+      <section>
+        <h2 class="semester-title">Semester 2:</h2>
+        <div class="subjudul">
+          <ul class="item-list">
+            <li>
+              <span>Biodata Baru</span>
+              <a href="Biodata Baru.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+            <li>
+              <span>Sepatu New Balance</span>
+              <a href="Sepatu.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+            <li>
+              <span>Dinosaurus Mosasaurus</span>
+              <a href="Dino.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+            <li>
+              <span>Kakashi Hatake</span>
+              <a href="Anime.html" class="btn btn-materi">Next &rarr;</a>
+            </li>
+          </ul>
+          
+          <div class="btn-container">
+            <a href="Biodata Baru.html" class="btn btn-tugas">Tugas 2 &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
