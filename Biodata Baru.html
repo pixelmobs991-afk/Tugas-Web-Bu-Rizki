@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+  <style>
+  
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg,  #F59F27  100%);
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .profile {
+      background: #2776F5;
+      border: 8px solid white;
+      border-radius: 20px;
+      width: 320px;
+      padding: 30px 20px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 4px solid white;
+      display: block;
+    }
+
+    .profile h2 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .profile p {
+      color: white;
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+     .nav-buttons {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .nav-buttons button {
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 4px solid white;
+      border-radius: 50px;
+      background: #7DA0DB;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="page1" class="page active">
+    <h1>Biodata baru</h1>
+
+    <div class="container">
+      <!-- Profil 1 -->
+      <div class="profile">
+        <img src="salman.jpeg" alt="Salman">
+        <h2>M. Salman Faris</h2>
+          <p>Hobi: Bermain Game</p>
+          <p>Umur: 17 tahun</p>
+          <p>SMK UNITOMO</p>
+    </div>
+
+      <div class="profile">
+        <img src="ronjin.jpeg" alt="Ronjin">
+        <h2>M. Ronjin Saputra</h2>
+          <p>Hobi: Bermain Game</p>
+          <p>Umur: 17 tahun</p>
+          <p>SMK UNITOMO</p>
+    </div>
+    
+    
+    <div class="nav-buttons">
+      <a href="Mulai.html"><button><- Back</button></a>
+      <a href="Sepatu.html"><button>Next -></button></a>
+    </div>
+  </div>
+</body>
+</html>
